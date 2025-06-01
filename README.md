@@ -19,6 +19,28 @@ S'exercer aux jointures SQL avec 3 tables liées entre elles.
 
 ---
 
+## 📊 Organisation des tables
+
+Les tables de cette base de données représentent trois entités principales :
+
+- **Course** : liste des cours disponibles avec leur niveau.
+- **Student** : liste des étudiants inscrits, chaque étudiant pouvant suivre un cours.
+- **Exam** : résultats des examens passés par les étudiants, liés à un étudiant et un cours précis.
+
+Chaque étudiant est lié à un seul cours via la clé étrangère `course_id` dans la table `Student`.
+
+Chaque examen référence un étudiant (`student_id`) et un cours (`course_id`), permettant de suivre les résultats par cours et par étudiant.
+
+---
+
+### 🗂️ Diagramme du Modèle Logique des Données (MLD)
+
+Vous pouvez consulter le diagramme du MLD pour mieux visualiser les relations entre les tables :
+
+![MLD Diagram](./MLD.png)
+
+---
+
 ## 🔹 Partie 1 – INNER JOIN
 
 1. Afficher le nom complet de l’étudiant et l’intitulé de sa formation.
